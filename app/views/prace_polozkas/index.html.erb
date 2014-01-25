@@ -1,0 +1,57 @@
+<div class="padding">
+	<div class="panel panel-default">
+		<div class="panel-body">
+
+			<table class="table table-condensed table-hover">
+				<thead>
+					<tr>
+						<th>Datum</th>
+						<th>Jméno</th>
+						<th>Práce pro projekt</th>
+						<th>Náplň práce</th>
+						<th>Počet hodin</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<!--TODO HERE
+				vytvorit dropdown, ktery umozni podminene zobrazovat pouze zaznamy napr. od Marusky, nebo k danemu projektu
+				pripadne jako dalsi krok umozni zobrazit zaznamy z casoveho rozmezi.
+				Take vlozit nahoru pole, ktere pocita sumu hodin vseho v tabulce zobrazeneho a taky mzdu (hodiny*50)-->
+
+				<tbody>
+					<% if signed_in? %>
+					<div class="well">
+						V zobrazeném období zaznamenáno <%= @aktualni_hodiny %> hodin práce, tj. <%= @aktualni_hodiny * 50 %> peněz.
+					</div>
+					<% @prace_polozkas.where(osoba_id: current_user.osoba_id).each do |prace_polozka| %>
+					<tr>
+						<td><%= prace_polozka.datum %></td>
+						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
+						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
+						<td><%= prace_polozka.obsah %></td>
+						<td><%= prace_polozka.hodiny %></td>
+						<td><%= link_to 'Upravit záznam', edit_prace_polozka_path(prace_polozka) %></td>
+						<td><%= link_to 'Smazat záznam', prace_polozka, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' } %></td>
+					</tr>
+					<% end %>
+					<% else %>
+					<% @prace_polozkas.each do |prace_polozka| %>
+					<tr>
+						<td><%= prace_polozka.datum %></td>
+						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
+						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
+						<td><%= prace_polozka.obsah %></td>
+						<td><%= prace_polozka.hodiny %></td>
+						<td><%= link_to 'Upravit záznam', edit_prace_polozka_path(prace_polozka) %></td>
+						<td><%= link_to 'Smazat záznam', prace_polozka, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' } %></td>
+					</tr>
+					<% end %>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

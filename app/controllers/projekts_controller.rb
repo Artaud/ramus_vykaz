@@ -1,0 +1,2 @@
+class ProjektsController < ApplicationController
+end

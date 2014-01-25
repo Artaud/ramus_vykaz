@@ -1,0 +1,5 @@
+<%# add navigation links to this file %>
+
+<% if signed_in? %>
+<li><%= link_to 'zapsat novou práci?', new_prace_polozka_path, :class => "btn btn-link" %></li>
+<% end %>

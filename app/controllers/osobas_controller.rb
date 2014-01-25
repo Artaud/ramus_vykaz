@@ -1,0 +1,2 @@
+class OsobasController < ApplicationController
+end

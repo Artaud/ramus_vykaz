@@ -1,0 +1,2 @@
+module PracePolozkasHelper
+end

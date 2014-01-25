@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  osoba_id: 1
+  projekt_id: 1
+  datum: 2014-01-21
+  obsah: MyText
+  hodiny: 1
+
+two:
+  osoba_id: 1
+  projekt_id: 1
+  datum: 2014-01-21
+  obsah: MyText
+  hodiny: 1

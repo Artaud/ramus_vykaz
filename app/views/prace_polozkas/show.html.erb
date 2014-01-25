@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Osoba:</strong>
+  <%= @prace_polozka.osoba_id %>
+</p>
+
+<p>
+  <strong>Projekt:</strong>
+  <%= @prace_polozka.projekt_id %>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @prace_polozka.datum %>
+</p>
+
+<p>
+  <strong>Obsah:</strong>
+  <%= @prace_polozka.obsah %>
+</p>
+
+<p>
+  <strong>Hodiny:</strong>
+  <%= @prace_polozka.hodiny %>
+</p>
+
+<%= link_to 'Edit', edit_prace_polozka_path(@prace_polozka) %> |
+<%= link_to 'Back', prace_polozkas_path %>
