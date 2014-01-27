@@ -1,24 +1,19 @@
-<% provide(:title, "Přihlášení") %>
+<% provide(:title, "Přihlášení") %> <h1>přihlášení</h1>
 
-<%= form_for(:session, url: sessions_path) do |f| %>
-
-<p class="container">
+<div class="container">
 	<div class="row">
-		<%= f.label :email, class: "col col-md-1 control-label" %>
-		<div class="col-md-11">
-			<%= f.text_field :email, class: "black-field" %>
+		<div class="col-md-3">
+			<%= form_for(:session, url: sessions_path) do |f| %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.submit "přihlaš se!", class: "btn btn-large btn-primary" %>
+			<% end %>
+
 		</div>
 	</div>
-
-	<div class="row">
-		<%= f.label "heslo", class: "col col-md-1 control-label" %>
-		<div class="col-md-11">
-			<%= f.password_field :password, class: "black-field" %>
-		</div>
-	</div>
-
-	<div class="col-md-12">
-		<%= f.submit "přihlaš se!", class: "btn btn-default margin-top" %>
-		<% end %>
-	</div>
-</p>
+</div>
