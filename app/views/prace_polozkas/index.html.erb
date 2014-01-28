@@ -17,7 +17,7 @@
 				</thead>
 
 				<tbody>
-					<% @prace_polozkas.where(osoba_id: current_user.osoba_id).each do |prace_polozka| %>
+					<% @prace_polozkas.each do |prace_polozka| %>
 					<tr>
 						<td><%= prace_polozka.datum %></td>
 						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
