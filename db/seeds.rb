@@ -24,7 +24,7 @@ User.create([{osoba_id: "1", email: "hynek.trojanek@ramus-os.cz", password: "kub
   {osoba_id: "2", email: "matous.glanc@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "3", email: "adela.richterova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "4", email: "jan.hana@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "5", email: "jan.rudolf@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "5", email: "honza.rudolf@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "6", email: "marie.paleckova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "7", email: "jitka.svobodova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "8", email: "jirka.richter@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 

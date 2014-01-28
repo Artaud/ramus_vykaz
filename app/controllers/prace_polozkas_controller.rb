@@ -17,10 +17,12 @@ class PracePolozkasController < ApplicationController
   # GET /prace_polozkas/new
   def new
     @prace_polozka = PracePolozka.new
+    projektsort
   end
 
   # GET /prace_polozkas/1/edit
   def edit
+    projektsort
   end
 
   # POST /prace_polozkas
@@ -68,6 +70,10 @@ class PracePolozkasController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_prace_polozka
     @prace_polozka = PracePolozka.find(params[:id])
+  end
+  
+  def projektsort
+    @projekts = Projekt.all.collect {|p| [p.nazev, p.id]}.sort
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

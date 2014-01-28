@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :projekt_id %><br>
-    <%= f.select(:projekt_id, Projekt.all.collect {|p| [p.nazev, p.id]}) %>
+    <%= f.select(:projekt_id, @projekts) %>
   </div>
   <div class="field">
     <%= f.label :datum %><br>
