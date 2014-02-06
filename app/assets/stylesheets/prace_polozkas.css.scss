@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// import the CSS framework
+@import "bootstrap";
+
 .table {
   text-align: center;
 }
@@ -24,4 +27,24 @@ footer {
 .padding {
   padding-top: 17px;
 }
+
+#novyzapisbtn {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.kontrastbtn {
+  @extend .btn;
+  @extend .btn-primary;
+  background-color: #777777;
+  color: white !important;
+  &:hover {
+    background-color: #444444;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
 

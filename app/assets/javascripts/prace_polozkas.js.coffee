@@ -43,7 +43,7 @@ ready = ->
         sPrevious: "<"
         sNext: ">"
       sProcessing: "načítám"
-      sInfo: "Zobrazeno _TOTAL_ záznamů (_START_ - _END_)"
+      sInfo: "Zobrazuji záznamy _START_ - _END_ (z celkových _TOTAL_)"
       sInfoFiltered: " - filtrováno _MAX_ záznamů"
       sSearch: "Filtr:"
       sLengthMenu: '<select>'+

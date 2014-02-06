@@ -32,7 +32,7 @@ class PracePolozkasController < ApplicationController
 
     respond_to do |format|
       if @prace_polozka.save
-        format.html { redirect_to @prace_polozka, notice: 'Prace polozka was successfully created.' }
+        format.html { redirect_to @prace_polozka, notice: 'Záznam byl vytvořen.' }
         format.json { render action: 'show', status: :created, location: @prace_polozka }
       else
         format.html { render action: 'new' }
@@ -46,7 +46,7 @@ class PracePolozkasController < ApplicationController
   def update
     respond_to do |format|
       if @prace_polozka.update(prace_polozka_params)
-        format.html { redirect_to @prace_polozka, notice: 'Prace polozka was successfully updated.' }
+        format.html { redirect_to @prace_polozka, notice: 'Záznam byl změněn.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

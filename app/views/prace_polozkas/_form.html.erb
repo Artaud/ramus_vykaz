@@ -29,9 +29,9 @@
   </div>
   <div class="field">
     <%= f.label :hodiny %><br>
-    <%= f.number_field :hodiny, :step => "any" %>
+    <%= f.number_field :hodiny, :step => "any",:min => "0" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Uložit' %>
   </div>
 <% end %>

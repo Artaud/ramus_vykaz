@@ -1,8 +1,7 @@
-<% provide(:title, "Přihlášení") %> <h1>přihlášení</h1>
-
 <div class="container">
 	<div class="row">
-		<div class="col-md-3">
+    <div class="col-md-4"></div>
+		<div class="col-md-6">
 			<%= form_for(:session, url: sessions_path) do |f| %>
 
 			<%= f.label :email %>
@@ -11,9 +10,8 @@
 			<%= f.label :password %>
 			<%= f.password_field :password %>
 
-			<%= f.submit "přihlaš se!", class: "btn btn-large btn-primary" %>
+			<%= f.submit "vstup!", class: "btn btn-large btn-primary" %>
 			<% end %>
-
-		</div>
-	</div>
+      </div>
+  </div>
 </div>
