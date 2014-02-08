@@ -20,7 +20,7 @@ ready = ->
         i++
       
       bunka=document.getElementsByTagName("th")
-      bunka[6].innerHTML="Součet = " + parseInt(iStranaSoucet) + "h, tj. " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
+      bunka[6].innerHTML="Součet = " + parseInt(iStranaSoucet) + "h; " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
       
       #nCells = nRow.getElementsByTagName("td")
       #nCells[4].innerHTML = "Součet = " + parseInt(iStranaSoucet) + "h, tj. " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"

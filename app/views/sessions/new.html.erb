@@ -1,17 +1,17 @@
 <div class="container">
 	<div class="row">
-    <div class="col-md-4"></div>
-		<div class="col-md-6">
-			<%= form_for(:session, url: sessions_path) do |f| %>
-
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-
+		<%= form_for(:session, url: sessions_path) do |f| %>
+		<div class="col-md-2">
+			<div class="form-group">
+				<%= f.label :email, class: "col-md-2 control-label" %>
+				<%= f.text_field :email, class: "col-md-4 form-control" %>
+			</div>
+			<div class="form-group">
+				<%= f.label :password, class: "col-md-2 control-label" %>
+				<%= f.password_field :password, class: "col-md-4 form-control" %>
+			</div>
 			<%= f.submit "vstup!", class: "btn btn-large btn-primary" %>
 			<% end %>
-      </div>
-  </div>
+		</div>
+	</div>
 </div>
