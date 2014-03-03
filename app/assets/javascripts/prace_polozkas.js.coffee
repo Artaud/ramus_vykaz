@@ -29,7 +29,7 @@ ready = ->
     sPaginationType: "full_numbers"
     bStateSave: true
     aoColumns: [
-        { "bSortable": true },
+        { "sType": "date" },
         { "bSortable": true },
         { "bSortable": true },
         { "bSortable": true },
