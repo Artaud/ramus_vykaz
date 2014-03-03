@@ -1,37 +1,57 @@
 <%= form_for(@prace_polozka) do |f| %>
-  <% if @prace_polozka.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@prace_polozka.errors.count, "error") %> prohibited this prace_polozka from being saved:</h2>
+<% if @prace_polozka.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@prace_polozka.errors.count, "error") %> prohibited this prace_polozka from being saved:</h2>
 
-      <ul>
-      <% @prace_polozka.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<ul>
+		<% @prace_polozka.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 
+<div class="field">
+	<%= f.hidden_field :osoba_id, :value => current_user.osoba_id %>
+</div>
+<div class="field">
+	<%= f.label :projekt_id %>
+	<br>
+	<%= f.select(:projekt_id, @projekts) %>
+</div>
+<div class="field">
+	<%= f.label :datum %>
+	<br>
+	<%= f.text_field :datum , :behaviour => 'datepicker', :value => Date.today %>
+</div>
+<div class="field">
+	<%= f.label :obsah %>
+	<br>
+	<%= f.text_area :obsah %>
+</div>
+<div class="field">
+	<%= f.label :hodiny %>
+	<br>
+	<%= f.number_field :hodiny, :step => "0.25",:min => "0" %>
+</div>
+<div class="actions">
+	<%= f.submit 'Uložit' %>
+</div>
 
-  <div class="field">
-    <%= f.hidden_field :osoba_id, :value => current_user.osoba_id %>
-  </div>
-  <div class="field">
-    <%= f.label :projekt_id %><br>
-    <%= f.select(:projekt_id, @projekts) %>
-  </div>
-  <div class="field">
-    <%= f.label :datum %><br>
-    <%= f.date_select :datum %>
-  </div>
-  <div class="field">
-    <%= f.label :obsah %><br>
-    <%= f.text_area :obsah %>
-  </div>
-  <div class="field">
-    <%= f.label :hodiny %><br>
-    <%= f.number_field :hodiny, :step => "any",:min => "0" %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Uložit' %>
-  </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('[behaviour~=datepicker]').datepicker({
+			format : "dd.mm.yyyy",
+			weekStart : 1,
+			todayBtn : "linked",
+			language : "cs",
+			todayHighlight : true
+		}
+		);
+	})
+
+</script>
+
 <% end %>

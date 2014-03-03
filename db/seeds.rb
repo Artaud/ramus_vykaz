@@ -15,10 +15,10 @@ Projekt.create([{nazev: "Hlavni cinnost - organizace", kod: "13101"}, {nazev: "R
   {nazev: "Provoz", kod: "131012"}, {nazev: "Fundraising", kod: "131013"}, {nazev: "PRopaganda", kod: "131014"}, 
   {nazev: "Koordinace klientu", kod: "131015"}, {nazev: "Koordinace asistentu", kod: "131016"}, 
   {nazev: "Porady", kod: "131017"}, {nazev: "Rambar", kod: "13201"}, {nazev: "Dodavky", kod: "13202"}, 
-  {nazev: "Vikendovky", kod: "13301"}, {nazev: "Klasicke vikendovky", kod: "133011"}, 
+  {nazev: "Vikendovky", kod: "13301"}, {nazev: "Jemne vikendovky", kod: "133011"}, 
   {nazev: "Drsne vikendovky", kod: "133012"}, {nazev: "Tabory", kod: "13302"}, {nazev: "Klasicke tabory", kod: "133021"}, 
   {nazev: "Drsne tabory", kod: "133022"}, {nazev: "Humr", kod: "13303"}, {nazev: "Beneficni akce", kod: "13304"}, 
-  {nazev: "Roadtripy", kod: "13305"}])
+  {nazev: "Roadtripy", kod: "13305"}, {nazev: "Dilna", kod: "13306"}])
 
 User.create([{osoba_id: "1", email: "hynek.trojanek@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "2", email: "matous.glanc@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
