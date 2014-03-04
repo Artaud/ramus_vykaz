@@ -24,7 +24,7 @@
 <div class="field">
 	<%= f.label :datum %>
 	<br>
-	<%= f.text_field :datum , :behaviour => 'datepicker', :value => Date.today %>
+	<%= f.text_field(:datum , :behaviour => 'datepicker', :value => @prace_polozka.datum.blank? ? Date.today : @prace_polozka.datum) %>
 </div>
 <div class="field">
 	<%= f.label :obsah %>
