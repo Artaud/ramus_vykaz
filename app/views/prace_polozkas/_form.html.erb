@@ -1,57 +1,79 @@
 <%= form_for(@prace_polozka) do |f| %>
-<% if @prace_polozka.errors.any? %>
-<div id="error_explanation">
-	<h2><%= pluralize(@prace_polozka.errors.count, "error") %> prohibited this prace_polozka from being saved:</h2>
+    <% if @prace_polozka.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@prace_polozka.errors.count, "error") %> prohibited this prace_polozka from being
+            saved:</h2>
 
-	<ul>
-		<% @prace_polozka.errors.full_messages.each do |msg| %>
-		<li>
-			<%= msg %>
-		</li>
-		<% end %>
-	</ul>
-</div>
-<% end %>
+          <ul>
+            <% @prace_polozka.errors.full_messages.each do |msg| %>
+                <li>
+                  <%= msg %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-<div class="field">
-	<%= f.hidden_field :osoba_id, :value => current_user.osoba_id %>
-</div>
-<div class="field">
-	<%= f.label :projekt_id %>
-	<br>
-	<%= f.select(:projekt_id, @projekts) %>
-</div>
-<div class="field">
-	<%= f.label :datum %>
-	<br>
-	<%= f.text_field(:datum , :behaviour => 'datepicker', :value => @prace_polozka.datum.blank? ? Date.today : @prace_polozka.datum) %>
-</div>
-<div class="field">
-	<%= f.label :obsah %>
-	<br>
-	<%= f.text_area :obsah %>
-</div>
-<div class="field">
-	<%= f.label :hodiny %>
-	<br>
-	<%= f.number_field :hodiny, :step => "0.25",:min => "0" %>
-</div>
-<div class="actions">
-	<%= f.submit 'Uložit' %>
-</div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <%= f.hidden_field :osoba_id, :value => current_user.osoba_id %>
+      </div>
+      <div class="form-group center row">
+        <%= f.label :projekt_id, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <!-- f.select(:projekt_id, @projekts, {include_blank: true}, {class: "form-control", id: 'sel2'}) -->
+          <%= f.select(:projekt_id, @projekts, {include_blank: false}, {class: "form-control", id: 'sel2'}) %>
+        </div>
+      </div>
+      <div class="form-group center row">
+        <%= f.label :datum, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+        <%= f.text_field(:datum, :behaviour => 'datepicker', class: 'form-control',
+                         :value => @prace_polozka.datum.blank? ? Date.today : @prace_polozka.datum) %>
+        </div>
+      </div>
+      <div class="form-group center row">
+        <%= f.label :obsah, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+        <%= f.text_area :obsah, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group center row">
+        <%= f.label :hodiny, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+        <%= f.number_field :hodiny, :step => "0.25", :min => "0", class: 'form-control' %>
+        </div>
+      </div>
+      <!--<div class="row padding-top20"></div>-->
+      <div class="form-group center actions row ">
+        <div class="col-lg-6"></div>
+        <%= f.submit 'Uložit', class: 'btn btn-primary col-lg-3 ulozmargin' %>
+        <%= link_to 'Zpět', prace_polozkas_path, class: 'btn btn-default col-lg-2 zpetmargin' %>
+      </div>
+    </form>
+    </div>
+    <div class="col-lg-4"></div>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('[behaviour~=datepicker]').datepicker({
-			format : "dd.mm.yyyy",
-			weekStart : 1,
-			todayBtn : "linked",
-			language : "cs",
-			todayHighlight : true
-		}
-		);
-	})
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[behaviour~=datepicker]').datepicker({
+                        format: "dd.mm.yyyy",
+                        weekStart: 1,
+                        todayBtn: "linked",
+                        language: "cs",
+                        todayHighlight: true
+                    }
+            );
+        })
 
-</script>
+        $(document).ready(function () {
+            $("#sel2").select2({
+                        width: 'resolve'
+                    }
+            );
+        })
+    </script>
 
 <% end %>
