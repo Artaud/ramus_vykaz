@@ -58,3 +58,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'select2-rails'
+
+#new relic for heroku
+gem 'newrelic_rpm'
