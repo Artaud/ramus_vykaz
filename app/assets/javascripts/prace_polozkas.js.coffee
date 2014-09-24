@@ -38,7 +38,7 @@ jQuery.extend jQuery.fn.dataTableExt.oSort,
 dTable = ->
   $("#prace_polozkas").dataTable
     fnHeaderCallback: (nRow, aaData, iStart, iEnd, aiDisplay) ->
-      HodinovaMzda=50
+      HodinovaMzda=60
       i=0
       iTotalSoucet=0
 
