@@ -70,6 +70,8 @@ dTable = ->
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
     aaSorting: [[0,'desc']]
+    sScrollX: "100%", # horizontal scrolling
+    bScrollCollapse: true, # horizontal scrolling
     oLanguage:
       oPaginate:
         sFirst: "<<"
