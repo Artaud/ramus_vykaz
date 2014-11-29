@@ -33,13 +33,13 @@
                         
 						<td>
               <% if current_user.osoba_id == 8 or current_user.osoba_id == Osoba.find_by(id: prace_polozka.osoba_id).id  %>
-              <%= link_to 'Upravit záznam', edit_prace_polozka_path(prace_polozka) %>
+              <%= link_to 'Upravit', edit_prace_polozka_path(prace_polozka) %>
               <% end %>
             </td>
 						            
             <td>
               <% if current_user.osoba_id == 8 or current_user.osoba_id == Osoba.find_by(id: prace_polozka.osoba_id).id  %>
-              <%= link_to 'Smazat záznam', prace_polozka, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' } %></td>
+              <%= link_to 'Smazat', prace_polozka, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' } %></td>
 				      <% end %>
           </tr>
 					<% end %>

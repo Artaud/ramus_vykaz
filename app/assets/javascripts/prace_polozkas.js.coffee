@@ -62,13 +62,13 @@ dTable = ->
     sPaginationType: "full_numbers"
     bStateSave: false#true
     aoColumns: [
-        { "bSortable": true, "sType": "date-eu"},
-        { "bSortable": true },
-        { "bSortable": true },
-        { "bSortable": true },
-        { "bSortable": true, "bSearchable": false },
-        { "bSortable": false, "bSearchable": false },
-        { "bSortable": false, "bSearchable": false }]
+        { "bSortable": true, "sType": "date-eu", "sWidth": '8%' },
+        { "bSortable": true, "sWidth": null },
+        { "bSortable": true, "sWidth": null },
+        { "bSortable": true, "sWidth": null },
+        { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
+        { "bSortable": false, "bSearchable": false, "sWidth": '8%' },
+        { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
     aaSorting: [[0,'desc']]
     oLanguage:
       oPaginate:
