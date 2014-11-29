@@ -60,15 +60,16 @@ dTable = ->
       #nCells[4].innerHTML = "Součet = " + parseInt(iStranaSoucet) + "h, tj. " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
 
     sPaginationType: "full_numbers"
-    bStateSave: true
+    bStateSave: false#true
     aoColumns: [
-        { "sType": "date-eu" },
+        { "bSortable": true, "sType": "date-eu"},
         { "bSortable": true },
         { "bSortable": true },
         { "bSortable": true },
         { "bSortable": true, "bSearchable": false },
         { "bSortable": false, "bSearchable": false },
         { "bSortable": false, "bSearchable": false }]
+    aaSorting: [[0,'desc']]
     oLanguage:
       oPaginate:
         sFirst: "<<"
