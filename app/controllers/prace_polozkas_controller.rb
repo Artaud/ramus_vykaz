@@ -32,8 +32,9 @@ class PracePolozkasController < ApplicationController
 
     respond_to do |format|
       if @prace_polozka.save
-        format.html { redirect_to @prace_polozka, notice: 'Zaznam byl vytvoren.' }
+        format.html { redirect_to action: 'index' } # changed to render index from redirect_to @prace_polozka
         format.json { render action: 'show', status: :created, location: @prace_polozka }
+        flash[:notice] = "Záznam byl vytvořen!"
       else
         format.html { render action: 'new' }
         format.json { render json: @prace_polozka.errors, status: :unprocessable_entity }

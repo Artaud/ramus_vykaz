@@ -33,13 +33,43 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+
 main {
   @extend .container;
-  background-color: #eee;
+  
+  background-color: #eea;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
+
+  border: 3px solid #3742B5;
+  //padding: 1%;
+
+  -webkit-border-radius: 5px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topright: 9px;
+  border-radius: 5px;
+  border-top-right-radius: 9px;
+
+  //background: #EDEBEB;
   }
+
+.form-border {
+  /*border: 3px solid #FA0D8F;*/
+  border: 3px solid #3742B5;
+  //padding: 1%;
+
+  -webkit-border-radius: 5px;
+  -webkit-border-top-right-radius: 9px;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topright: 9px;
+  border-radius: 5px;
+  border-top-right-radius: 9px;
+
+  background: #EDEBEB;
+}
+
 section {
   @extend .row;
   margin-top: 20px;
