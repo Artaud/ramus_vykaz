@@ -1,1 +1,8 @@
 <%# add navigation links to this file %>
+<li>
+	<div id="novyzapisbtn">
+		<% if signed_in? %>
+		<%= link_to 'zapsat novou práci?', new_prace_polozka_path, :class => "kontrastbtn" %>
+		<% end %>
+	</div>
+</li>
