@@ -11,15 +11,16 @@ Osoba.create([{jmeno: "Hynek", prijmeni: "Trojanek"}, {jmeno: "Matous", prijmeni
   {jmeno: "Jitka", prijmeni: "Svobodova"}, {jmeno: "Jiri", prijmeni: "Richter"}, {jmeno: "Barbora", prijmeni: "Aunicka"},
   {jmeno: "Anna", prijmeni: "Srubarova"}, {jmeno: "Ondrej", prijmeni: "Balik"}])
 
-Projekt.create([{nazev: "Hlavni cinnost", kod: "131"},{nazev: "Hlavni cinnost - organizace", kod: "13101"}, {nazev: "Rizeni", kod: "131011"}, 
-  {nazev: "Provoz", kod: "131012"}, {nazev: "Fundraising", kod: "131013"}, {nazev: "PRopaganda", kod: "131014"}, 
-  {nazev: "Koordinace klientu", kod: "131015"}, {nazev: "Koordinace asistentu", kod: "131016"}, 
-  {nazev: "Porady", kod: "131017"}, {nazev: "Vedlejsi cinnost", kod: "132"}, {nazev: "Rambar", kod: "13201"},
-  {nazev: "Dodavky", kod: "13202"}, {nazev: "Projekty", kod: "133"},
-  {nazev: "Vikendovky", kod: "13301"}, {nazev: "Jemne vikendovky", kod: "133011"}, 
-  {nazev: "Drsne vikendovky", kod: "133012"}, {nazev: "Tabory", kod: "13302"}, {nazev: "Klasicke tabory", kod: "133021"}, 
-  {nazev: "Drsne tabory", kod: "133022"}, {nazev: "Humr", kod: "13303"}, {nazev: "Beneficni akce", kod: "13304"}, 
-  {nazev: "Roadtripy", kod: "13305"}, {nazev: "Dilna", kod: "13306"}])
+Projekt.create([{nazev: "Hlavni cinnost", kod: "1"},{nazev: "Hlavni cinnost - organizace", kod: "101"}, 
+  {nazev: "Rizeni", kod: "1011"}, 
+  {nazev: "Provoz", kod: "1012"}, {nazev: "Fundraising", kod: "1013"}, {nazev: "PRopaganda", kod: "1014"}, 
+  {nazev: "Koordinace klientu", kod: "1015"}, {nazev: "Koordinace asistentu", kod: "1016"}, 
+  {nazev: "Porady", kod: "1017"}, {nazev: "Vedlejsi cinnost", kod: "2"}, {nazev: "Rambar", kod: "201"},
+  {nazev: "Dodavky", kod: "202"}, {nazev: "Projekty", kod: "3"},
+  {nazev: "Vikendovky", kod: "301"}, {nazev: "Jemne vikendovky", kod: "3011"}, 
+  {nazev: "Drsne vikendovky", kod: "3012"}, {nazev: "Tabory", kod: "302"}, {nazev: "Klasicke tabory", kod: "3021"}, 
+  {nazev: "Drsne tabory", kod: "3022"}, {nazev: "Humr", kod: "303"}, {nazev: "Beneficni akce", kod: "304"}, 
+  {nazev: "Roadtripy", kod: "305"}, {nazev: "Dilna", kod: "306"}])
 
 User.create([{osoba_id: "1", email: "hynek.trojanek@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "2", email: "matous.glanc@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
