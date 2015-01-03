@@ -19,22 +19,19 @@ class PracePolozkasController < ApplicationController
     @prace_polozka = PracePolozka.new
     projektsort
 
+    # Org chart
     data_table = GoogleVisualr::DataTable.new
-
     # Add Column Headers
     data_table.new_column('string', 'Nazev a kod')
     data_table.new_column('string', 'Rodic')
     data_table.new_column('string', 'Tooltip')
     # Add Rows and Values
-
     datarows = Array.new
-
       # Sort projects into tree structure
       Projekt.all.each do |proj|
 
         onerow = Array.new(3)
-         
-          onerow[0] = proj.nazev  #actual node TODO add html graphics
+        onerow[0] = proj.kod.to_s + ' ' + proj.nazev  #actual node TODO add html graphics
 
           if proj.kod.to_s.length == 1
             parent = ''
@@ -56,27 +53,14 @@ class PracePolozkasController < ApplicationController
           end
 
           onerow[1] = parent      #parent node
-
           onerow[2] = proj.nazev  #tooltip
-
           datarows << onerow
-      end
+    end
 
-
-      data_table.add_rows(datarows)
-
-    # data_table.add_rows([
-    #   [{ :v => Projekt.find(1).nazev, :f => Projekt.find(1).nazev + '<div style="color:red; font-style:italic">' + 
-    #     Projekt.find(1).kod.to_s + '</div>' }, '', ''],
-    #   [Projekt.find(2).nazev, Projekt.find(1).nazev, '' ],
-    #   [Projekt.find(3).nazev, Projekt.find(1).nazev, '' ],
-    #   [Projekt.find(4).nazev, '', '' ]
-    #   ])
-
+    datarows.sort
+    data_table.add_rows(datarows)
     option = { size: 'medium', :allowHtml => true, allowCollapse: true }
     @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, option)
-
-
   end
 
   # GET /prace_polozkas/1/edit
