@@ -46,7 +46,7 @@ class PracePolozkasController < ApplicationController
             tkod = proj.kod.to_s[0,1]
             parent_proj = Projekt.find_by kod: tkod.to_i 
             puts 'length 3, nazev: ' + proj.nazev 
-            puts 'parent proj: ' + parent_proj
+            puts 'parent proj: ' + parent_proj.inspect
             parent = parent_proj.nazev
           end
 
@@ -54,7 +54,7 @@ class PracePolozkasController < ApplicationController
             tkod = proj.kod.to_s[0,3]
             parent_proj = Projekt.find_by kod: tkod.to_i
             puts 'length 3, nazev: ' + proj.nazev
-            puts 'parent proj: ' + parent_proj
+            puts 'parent proj: ' + parent_proj.inspect
             parent = parent_proj.nazev
           end
 
