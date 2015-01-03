@@ -38,18 +38,23 @@ class PracePolozkasController < ApplicationController
 
           if proj.kod.to_s.length == 1
             parent = ''
+            puts 'length 1, nazev: ' + proj.nazev
+            puts 'parent: ' + parent
           end
 
           if proj.kod.to_s.length == 3
             tkod = proj.kod.to_s[0,1]
-            puts tkod
             parent_proj = Projekt.find_by kod: tkod.to_i 
+            puts 'length 3, nazev: ' + proj.nazev 
+            puts 'parent proj: ' + parent_proj
             parent = parent_proj.nazev
           end
 
           if proj.kod.to_s.length == 4
             tkod = proj.kod.to_s[0,3]
             parent_proj = Projekt.find_by kod: tkod.to_i
+            puts 'length 3, nazev: ' + proj.nazev
+            puts 'parent proj: ' + parent_proj
             parent = parent_proj.nazev
           end
 
