@@ -36,18 +36,18 @@ class PracePolozkasController < ApplicationController
          
           onerow[0] = proj.nazev  #actual node TODO add html graphics
 
-          if proj.kod.to_s.length == 3
+          if proj.kod.to_s.length == 1
             parent = ''
           end
 
-          if proj.kod.to_s.length == 5
-            tkod = proj.kod.to_s[0,3]
+          if proj.kod.to_s.length == 3
+            tkod = proj.kod.to_s[0,1]
             parent_proj = Projekt.find_by kod: tkod.to_i 
             parent = parent_proj.nazev
           end
 
-          if proj.kod.to_s.length == 6
-            tkod = proj.kod.to_s[0,5]
+          if proj.kod.to_s.length == 4
+            tkod = proj.kod.to_s[0,3]
             parent_proj = Projekt.find_by kod: tkod.to_i
             parent = parent_proj.nazev
           end
