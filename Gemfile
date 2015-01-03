@@ -14,6 +14,11 @@ gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
   gem 'sqlite3'
+  # better handling of errors
+  gem "better_errors"
+  gem "binding_of_caller"
+  # thin webserver
+  gem "thin"
 end
 
 # Use Uglifier as compressor for JavaScript assets
@@ -59,5 +64,8 @@ end
 
 gem 'select2-rails'
 
-#new relic for heroku
+# new relic for heroku
 gem 'newrelic_rpm'
+
+# Google VisualR / google visualisation API wrapper
+gem "google_visualr", ">= 2.1"

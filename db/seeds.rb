@@ -11,10 +11,11 @@ Osoba.create([{jmeno: "Hynek", prijmeni: "Trojanek"}, {jmeno: "Matous", prijmeni
   {jmeno: "Jitka", prijmeni: "Svobodova"}, {jmeno: "Jiri", prijmeni: "Richter"}, {jmeno: "Barbora", prijmeni: "Aunicka"},
   {jmeno: "Anna", prijmeni: "Srubarova"}, {jmeno: "Ondrej", prijmeni: "Balik"}])
 
-Projekt.create([{nazev: "Hlavni cinnost - organizace", kod: "13101"}, {nazev: "Rizeni", kod: "131011"}, 
+Projekt.create([{nazev: "Hlavni cinnost", kod: "131"},{nazev: "Hlavni cinnost - organizace", kod: "13101"}, {nazev: "Rizeni", kod: "131011"}, 
   {nazev: "Provoz", kod: "131012"}, {nazev: "Fundraising", kod: "131013"}, {nazev: "PRopaganda", kod: "131014"}, 
   {nazev: "Koordinace klientu", kod: "131015"}, {nazev: "Koordinace asistentu", kod: "131016"}, 
-  {nazev: "Porady", kod: "131017"}, {nazev: "Rambar", kod: "13201"}, {nazev: "Dodavky", kod: "13202"}, 
+  {nazev: "Porady", kod: "131017"}, {nazev: "Vedlejsi cinnost", kod: "132"}, {nazev: "Rambar", kod: "13201"},
+  {nazev: "Dodavky", kod: "13202"}, {nazev: "Projekty", kod: "133"},
   {nazev: "Vikendovky", kod: "13301"}, {nazev: "Jemne vikendovky", kod: "133011"}, 
   {nazev: "Drsne vikendovky", kod: "133012"}, {nazev: "Tabory", kod: "13302"}, {nazev: "Klasicke tabory", kod: "133021"}, 
   {nazev: "Drsne tabory", kod: "133022"}, {nazev: "Humr", kod: "13303"}, {nazev: "Beneficni akce", kod: "13304"}, 

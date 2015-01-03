@@ -18,6 +18,62 @@ class PracePolozkasController < ApplicationController
   def new
     @prace_polozka = PracePolozka.new
     projektsort
+
+    data_table = GoogleVisualr::DataTable.new
+
+    # Add Column Headers
+    data_table.new_column('string', 'Nazev a kod')
+    data_table.new_column('string', 'Rodic')
+    data_table.new_column('string', 'Tooltip')
+    # Add Rows and Values
+
+    datarows = Array.new
+
+      # Sort projects into tree structure
+      Projekt.all.each do |proj|
+
+        onerow = Array.new(3)
+         
+          onerow[0] = proj.nazev  #actual node TODO add html graphics
+
+          if proj.kod.to_s.length == 3
+            parent = ''
+          end
+
+          if proj.kod.to_s.length == 5
+            tkod = proj.kod.to_s[0,3]
+            parent_proj = Projekt.find_by kod: tkod.to_i 
+            parent = parent_proj.nazev
+          end
+
+          if proj.kod.to_s.length == 6
+            tkod = proj.kod.to_s[0,5]
+            parent_proj = Projekt.find_by kod: tkod.to_i
+            parent = parent_proj.nazev
+          end
+
+          onerow[1] = parent      #parent node
+
+          onerow[2] = proj.nazev  #tooltip
+
+          datarows << onerow
+      end
+
+
+      data_table.add_rows(datarows)
+
+    # data_table.add_rows([
+    #   [{ :v => Projekt.find(1).nazev, :f => Projekt.find(1).nazev + '<div style="color:red; font-style:italic">' + 
+    #     Projekt.find(1).kod.to_s + '</div>' }, '', ''],
+    #   [Projekt.find(2).nazev, Projekt.find(1).nazev, '' ],
+    #   [Projekt.find(3).nazev, Projekt.find(1).nazev, '' ],
+    #   [Projekt.find(4).nazev, '', '' ]
+    #   ])
+
+    option = { width: 400, height: 240, title: 'Company Performance', :allowHtml => true }
+    @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, option)
+
+
   end
 
   # GET /prace_polozkas/1/edit
@@ -65,6 +121,24 @@ class PracePolozkasController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # def show_structure
+  #   data_table = GoogleVisualr::DataTable.new
+
+  #   # Add Column Headers
+  #   data_table.new_column('string', 'nazev' )
+  #   data_table.new_column('number', 'kod')
+  #   # Add Rows and Values
+  #   data_table.add_rows([
+  #     ['Hardcoded Halvni cinnost', 13101],
+  #     ['Hardcoded2005', 1170],
+  #     ['Hardcoded2006', 660],
+  #     ['Hardcoded2007', 1030]
+  #     ])
+
+  #   option = { width: 400, height: 240, title: 'Company Performance' }
+  #   @chart = GoogleVisualr::Interactive::AreaChart.new(data_table, option)
+  # end
 
   private
 
