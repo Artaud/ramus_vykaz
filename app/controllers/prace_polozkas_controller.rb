@@ -57,7 +57,7 @@ class PracePolozkasController < ApplicationController
           datarows << onerow
     end
 
-    datarows.sort
+    datarows = datarows.sort
     data_table.add_rows(datarows)
     option = { size: 'medium', :allowHtml => true, allowCollapse: true }
     @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, option)
