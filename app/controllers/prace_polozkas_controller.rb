@@ -20,11 +20,23 @@ class PracePolozkasController < ApplicationController
     projektsort
 
     # Org chart
-    data_table = GoogleVisualr::DataTable.new
+    data_table1 = GoogleVisualr::DataTable.new
+    data_table2 = GoogleVisualr::DataTable.new
+    data_table3 = GoogleVisualr::DataTable.new
+    data_table4 = GoogleVisualr::DataTable.new
     # Add Column Headers
-    data_table.new_column('string', 'Nazev a kod')
-    data_table.new_column('string', 'Rodic')
-    data_table.new_column('string', 'Tooltip')
+    data_table1.new_column('string', 'Nazev a kod')
+    data_table1.new_column('string', 'Rodic')
+    data_table1.new_column('string', 'Tooltip')
+    data_table2.new_column('string', 'Nazev a kod')
+    data_table2.new_column('string', 'Rodic')
+    data_table2.new_column('string', 'Tooltip')
+    data_table3.new_column('string', 'Nazev a kod')
+    data_table3.new_column('string', 'Rodic')
+    data_table3.new_column('string', 'Tooltip')
+    data_table4.new_column('string', 'Nazev a kod')
+    data_table4.new_column('string', 'Rodic')
+    data_table4.new_column('string', 'Tooltip')
     # Add Rows and Values
     datarows = Array.new
       # Sort projects into tree structure
@@ -58,9 +70,22 @@ class PracePolozkasController < ApplicationController
     end
 
     datarows = datarows.sort
-    data_table.add_rows(datarows)
+    
+    datarows1 = datarows.select {|row| row[0][0] == '1'}
+    datarows2 = datarows.select {|row| row[0][0] == '2'}
+    datarows3 = datarows.select {|row| row[0][0] == '3'}
+    datarows4 = datarows.select {|row| row[0][0] == '4'}
+    data_table1.add_rows(datarows1)
+    data_table2.add_rows(datarows2)
+    data_table3.add_rows(datarows3)
+    data_table4.add_rows(datarows4)
+    # asdd
+
     option = { size: 'medium', :allowHtml => true, allowCollapse: true }
-    @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, option)
+    @chart1 = GoogleVisualr::Interactive::OrgChart.new(data_table1, option)
+    @chart2 = GoogleVisualr::Interactive::OrgChart.new(data_table2, option)
+    @chart3 = GoogleVisualr::Interactive::OrgChart.new(data_table3, option)
+    @chart4 = GoogleVisualr::Interactive::OrgChart.new(data_table4, option)
   end
 
   # GET /prace_polozkas/1/edit
