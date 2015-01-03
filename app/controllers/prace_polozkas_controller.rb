@@ -73,7 +73,7 @@ class PracePolozkasController < ApplicationController
     #   [Projekt.find(4).nazev, '', '' ]
     #   ])
 
-    option = { width: 400, height: 240, title: 'Company Performance', :allowHtml => true }
+    option = { size: 'medium', :allowHtml => true, allowCollapse: true }
     @chart = GoogleVisualr::Interactive::OrgChart.new(data_table, option)
 
 

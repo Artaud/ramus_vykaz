@@ -76,3 +76,35 @@ footer {
 .ulozmargin {
   margin-right: 5px;
 }
+
+
+#OrgChartModal .modal-dialog  {width:95%;}
+
+#orgchartFF {
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+transform: rotate(-90deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+float:left;
+height:100px; /* this should be the css value from the chart's width. you could set this programmatically with javascript or just take a good guess */
+}
+
+/*add an element after your container to fix the float issue like <br style="height:1%;clear:both" />*/
+
+.google-visualization-orgchart-nodeFF {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+transform: rotate(90deg);
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+/* another way to shrink the chart is to use a smaller font which can be styled in this class */
+}
+
+.google-visualization-orgchart-space-small {
+/* adjust this height as needed since this is really based on the width of your tree's root element */
+height:5px;
+}
+
+.google-visualization-orgchart-connrow-small {
+/* again this will vary base on how wide your elements are */
+height:5px;
+}
