@@ -9,8 +9,10 @@
 
 <li>
 	<div id="statistika">
+		<% if signed_in? %>
 		<% if current_user.osoba_id == 8 %>
 		<%= link_to 'statistika', statistika_path, :class => 'kontrastbtn' %>
+		<% end %>
 		<% end %>
 	</div>
 </li>
