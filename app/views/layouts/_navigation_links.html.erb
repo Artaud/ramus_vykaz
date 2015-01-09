@@ -6,3 +6,11 @@
 		<% end %>
 	</div>
 </li>
+
+<li>
+	<div id="statistika">
+		<% if current_user.osoba_id == 8 %>
+		<%= link_to 'statistika', statistika_path, :class => 'kontrastbtn' %>
+		<% end %>
+	</div>
+</li>
