@@ -65,7 +65,7 @@ dTable = ->
         { "bSortable": true, "sType": "date-eu", "sWidth": '8%' },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "sWidth": null },
-        { "bSortable": true, "sWidth": null },
+        { "bSortable": true, "bSearchable": false, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
