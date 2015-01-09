@@ -1,3 +1,26 @@
+<table>
 
-<h1>This is the statistika page</h1>
+	<thead>
+		<tr>
+			<th>Projekt</th>
+			<th>Jméno</th>
+		</tr>
+	</thead>
 
+<% @projekts.each do |proj| %>
+
+
+	<tbody>
+		<tr>
+			<td><%= proj.nazev %></td>
+			<td>
+			<table>
+
+
+			</td>
+		</tr>
+	</tbody>
+
+<% end %>
+
+</table>

@@ -64,7 +64,7 @@ dTable = ->
     aoColumns: [
         { "bSortable": true, "sType": "date-eu", "sWidth": '8%' },
         { "bSortable": true, "sWidth": null },
-        { "bSortable": true, "sWidth": null },
+        { "bSortable": true, "sWidth": null, "aDataSort": [0, 2, 1] },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' },
