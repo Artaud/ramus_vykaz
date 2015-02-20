@@ -21,7 +21,7 @@
 					<tr>
 						<td><%= prace_polozka.datum %></td>
 						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
-						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
+						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).kod.to_s + ' - ' + Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
 						<td><%= prace_polozka.obsah %></td>
 						<td><%= prace_polozka.hodiny %></td>
                         
