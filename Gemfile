@@ -19,6 +19,8 @@ group :development do
   gem "binding_of_caller"
   # thin webserver
   gem "thin"
+  # quiet assets logging
+  gem 'quiet_assets'
 end
 
 # Use Uglifier as compressor for JavaScript assets
