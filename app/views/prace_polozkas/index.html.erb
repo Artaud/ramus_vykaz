@@ -1,38 +1,35 @@
 <div class="padding">
 	<div class="panel panel-default">
-		<div class="panel-body center">
+		<div class="panel-bod center">
 
 			<% if signed_in? %>
 			<table id="prace_polozkas" class="table table-condensed table-hover table-bordered">
 				<thead>
 					<tr>
+						<th class="cellaccent"></th>
 						<th>Datum</th>
 						<th>Jméno</th>
 						<th>Práce pro projekt</th>
 						<th>Náplň práce</th>
 						<th>Počet hodin</th>
 						<th></th>
-						<th class="cellaccent"></th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<% @prace_polozkas.each do |prace_polozka| %>
 					<tr>
-						<td><%= prace_polozka.datum %></td>
-						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
-						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).kod.to_s + ' - ' + Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
-						<td><%= prace_polozka.obsah %></td>
-						<td><%= prace_polozka.hodiny %></td>
-						
 						<td>
 							<% if current_user.osoba_id == 8 or current_user.osoba_id == Osoba.find_by(id: prace_polozka.osoba_id).id  %>
 							<%= link_to edit_prace_polozka_path(prace_polozka), class: "btn btn-default" do %>
 							<%= fa_icon "pencil" %>
 							<% end %>
 							<% end %>
-						</td>
-						
+						</td>						<td><%= prace_polozka.datum %></td>
+						<td><%= Osoba.find_by(id: prace_polozka.osoba_id).jmeno + " " + Osoba.find_by(id: prace_polozka.osoba_id).prijmeni %></td>
+						<td><%= Projekt.find_by(id: prace_polozka.projekt_id).kod.to_s + ' - ' + Projekt.find_by(id: prace_polozka.projekt_id).nazev %></td>
+						<td><%= prace_polozka.obsah %></td>
+						<td><%= prace_polozka.hodiny %></td>
 						<td>
 							<% if current_user.osoba_id == 8 or current_user.osoba_id == Osoba.find_by(id: prace_polozka.osoba_id).id  %>
 							<%= link_to prace_polozka, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' }, class: "btn btn-danger" do %>

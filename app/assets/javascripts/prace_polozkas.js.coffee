@@ -43,18 +43,18 @@ dTable = ->
       iTotalSoucet=0
 
       while i<aaData.length
-        iTotalSoucet += aaData[i][4] * 1
+        iTotalSoucet += aaData[i][5] * 1
         i++
 
       iStranaSoucet=0
       i=iStart
 
       while i<iEnd
-        iStranaSoucet += aaData[aiDisplay[i]][4] * 1
+        iStranaSoucet += aaData[aiDisplay[i]][5] * 1
         i++
 
       bunka=document.getElementsByTagName("th")
-      bunka[6].innerHTML="Součet = " + parseFloat(iStranaSoucet) + "h; " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
+      bunka[0].innerHTML="Součet = " + parseFloat(iStranaSoucet) + "h; " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
 
       #nCells = nRow.getElementsByTagName("td")
       #nCells[4].innerHTML = "Součet = " + parseInt(iStranaSoucet) + "h, tj. " + parseInt(iStranaSoucet*HodinovaMzda) + " Kč"
@@ -62,12 +62,12 @@ dTable = ->
     sPaginationType: "full_numbers"
     bStateSave: false#true
     aoColumns: [
-        { "bSortable": true, "sType": "date-eu", "sWidth": '8%' },
+        { "bSortable": true, "sType": "date-eu", "sWidth": '7%' },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
-        { "bSortable": false, "bSearchable": false, "sWidth": '8%' },
+        { "bSortable": false, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
     aaSorting: [[0,'desc']]
     sScrollX: "100%", # horizontal scrolling
