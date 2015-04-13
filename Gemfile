@@ -71,3 +71,5 @@ gem 'newrelic_rpm'
 
 # Google VisualR / google visualisation API wrapper
 gem "google_visualr", ">= 2.1"
+
+gem 'font-awesome-rails'
