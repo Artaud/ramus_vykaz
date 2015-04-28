@@ -62,12 +62,12 @@ dTable = ->
     sPaginationType: "full_numbers"
     bStateSave: false#true
     aoColumns: [
+        { "bSortable": false, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": true, "sType": "date-eu", "sWidth": '7%' },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": null },
         { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
-        { "bSortable": false, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
     aaSorting: [[0,'desc']]
     sScrollX: "100%", # horizontal scrolling
