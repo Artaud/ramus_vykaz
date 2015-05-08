@@ -64,14 +64,22 @@ dTable = ->
     aoColumns: [
         { "bSortable": false, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": true, "sType": "date-eu", "sWidth": '7%' },
-        { "bSortable": true, "sWidth": null },
-        { "bSortable": true, "sWidth": null },
-        { "bSortable": true, "bSearchable": false, "sWidth": null },
+        { "bSortable": true, "sWidth": '12%' },
+        { "bSortable": true, "sWidth": '25%' },
+        { "bSortable": true, "bSearchable": false, "sWidth": '36%' },
         { "bSortable": true, "bSearchable": false, "sWidth": '6%' },
         { "bSortable": false, "bSearchable": false, "sWidth": '8%' }]
+      # aoColumns: [
+      #     { "bSortable": false, "bSearchable": false, "sWidth": '20px' },
+      #     { "bSortable": true, "sType": "date-eu", "sWidth": '25px' },
+      #     { "bSortable": true, "sWidth": '30px' },
+      #     { "bSortable": true, "sWidth": '60px' },
+      #     { "bSortable": true, "bSearchable": false, "sWidth": '80px' },
+      #     { "bSortable": true, "bSearchable": false, "sWidth": '20px' },
+      #     { "bSortable": false, "bSearchable": false, "sWidth": '30px' }]
     aaSorting: [[1,'desc']]
-    sScrollX: "100%", # horizontal scrolling
-    bScrollCollapse: true, # horizontal scrolling
+    # sScrollX: "80%", # horizontal scrolling
+    # bScrollCollapse: true, # horizontal scrolling
     oLanguage:
       oPaginate:
         sFirst: "<<"

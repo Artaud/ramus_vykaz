@@ -35,22 +35,22 @@ img {
 // to make views framework-neutral
 
 main {
-  @extend .container;
+  // @extend .container;
   
-  background-color: #eea;
+  // background-color: #DE2EB4;
   //padding-bottom: 80px;
-  width: 100%;
+  // width: 100%;
   margin-top: 51px; // accommodate the navbar
 
   border: 3px solid #3742B5;
   //padding: 1%;
 
-  -webkit-border-radius: 5px;
-  -webkit-border-top-right-radius: 9px;
-  -moz-border-radius: 5px;
-  -moz-border-radius-topright: 9px;
-  border-radius: 5px;
-  border-top-right-radius: 9px;
+  -webkit-border-radius: 3px;
+  // -webkit-border-top-right-radius: 9px;
+  -moz-border-radius: 3px;
+  // -moz-border-radius-topright: 9px;
+  border-radius: 3px;
+  // border-top-right-radius: 9px;
 
   //background: #EDEBEB;
   }
@@ -61,11 +61,11 @@ main {
   //padding: 1%;
 
   -webkit-border-radius: 5px;
-  -webkit-border-top-right-radius: 9px;
+  // -webkit-border-top-right-radius: 9px;
   -moz-border-radius: 5px;
-  -moz-border-radius-topright: 9px;
+  // -moz-border-radius-topright: 9px;
   border-radius: 5px;
-  border-top-right-radius: 9px;
+  // border-top-right-radius: 9px;
 
   background: #EDEBEB;
 }
