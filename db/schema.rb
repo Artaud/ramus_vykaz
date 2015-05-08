@@ -13,14 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140125114907) do
 
-  create_table "osobas", force: true do |t|
+  create_table "osobas", force: :cascade do |t|
     t.string   "jmeno"
     t.string   "prijmeni"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "prace_polozkas", force: true do |t|
+  create_table "prace_polozkas", force: :cascade do |t|
     t.integer  "osoba_id"
     t.integer  "projekt_id"
     t.date     "datum"
@@ -30,14 +30,14 @@ ActiveRecord::Schema.define(version: 20140125114907) do
     t.datetime "updated_at"
   end
 
-  create_table "projekts", force: true do |t|
+  create_table "projekts", force: :cascade do |t|
     t.string   "nazev"
     t.integer  "kod"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"

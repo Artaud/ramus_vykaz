@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+# gem 'rails', '4.0.2'
+gem 'rails'
 gem 'rails_12factor'
 
 # Use postgresql as the database for Active Record
@@ -30,7 +31,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Use bcrypt for hashing
-gem 'bcrypt-ruby'
+# gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -24,15 +24,15 @@ Projekt.create([{nazev: "Hlavni cinnost", kod: "1"},{nazev: "Hlavni cinnost - or
   {nazev: "Drsne tabory", kod: "3022"}, {nazev: "Humr", kod: "303"}, {nazev: "Beneficni akce", kod: "304"}, 
   {nazev: "Roadtripy", kod: "305"}, {nazev: "Dilna", kod: "306"}])
 
-User.create([{osoba_id: "1", email: "hynek.trojanek@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "2", email: "matous.glanc@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "3", email: "adela.richterova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "4", email: "jan.hana@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "5", email: "honza.rudolf@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "6", email: "marie.paleckova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "7", email: "jitka.svobodova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "8", email: "jirka.richter@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "9", email: "bara.aunicka@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "10", email: "anna.srubarova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "11", email: "ondrej.balik@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}
+User.create([{osoba_id: "1", email: "hynek.trojanek@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "2", email: "matous.glanc@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "3", email: "adela.richterova@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "4", email: "jan.hana@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "5", email: "honza.rudolf@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "6", email: "marie.paleckova@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "7", email: "jitka.svobodova@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "8", email: "jirka.richter@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "9", email: "bara.aunicka@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "10", email: "anna.srubarova@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}, 
+  {osoba_id: "11", email: "ondrej.balik@ramus.je", password: "kubaverich", password_confirmation: "kubaverich"}
   ])
