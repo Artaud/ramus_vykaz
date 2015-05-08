@@ -2,7 +2,7 @@
 <li>
 	<div id="novyzapisbtn">
 		<% if signed_in? %>
-		<%= link_to 'zapsat novou práci?', new_prace_polozka_path, :class => "kontrastbtn" %>
+		<%= link_to 'zapsat novou práci?', new_prace_polozka_path, :class => "btn kontrastbtn" %>
 		<% end %>
 	</div>
 </li>
@@ -11,7 +11,7 @@
 	<div id="statistika">
 		<% if signed_in? %>
 		<% if current_user.osoba_id == 8 %>
-		<%= link_to 'statistika', statistika_path, :class => 'kontrastbtn' %>
+		<%= link_to 'statistika', statistika_path, :class => 'btn kontrastbtn' %>
 		<% end %>
 		<% end %>
 	</div>
