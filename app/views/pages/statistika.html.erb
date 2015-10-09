@@ -1,9 +1,10 @@
-<table>
+<table class="table table-condensed">
 
 	<thead>
 		<tr>
 			<th>Projekt</th>
 			<th>Jméno</th>
+			<th><input behaviour="datepicker" placeholder="Vyber měsíc" style="text-align: center"></input></th>
 		</tr>
 	</thead>
 
@@ -12,11 +13,9 @@
 
 	<tbody>
 		<tr>
+			<td><%= proj.kod %></td>
 			<td><%= proj.nazev %></td>
-			<td>
-			<table>
-			</table>
-</table>
+			<td id="<%= proj.kod %>"></td>
 
 			</td>
 		</tr>
@@ -25,3 +24,24 @@
 <% end %>
 
 </table>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[behaviour~=datepicker]').datepicker({
+      format: "mm.yyyy",
+      weekStart: 1,
+      todayBtn: "linked",
+      language: "cs",
+      todayHighlight: true,
+      orientation: "top",
+      startView: "months",
+      minViewMode: "months",
+      autoclose: true,
+    }
+    ).on('changeDate', function(e) {
+  		alert('hey');
+    });
+  });
+
+</script>
