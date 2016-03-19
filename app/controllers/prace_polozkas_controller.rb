@@ -9,6 +9,11 @@ class PracePolozkasController < ApplicationController
     end
   end
 
+  def statistika
+    @prace_polozkas = PracePolozka.all
+    @projekts = Projekt.all
+  end
+
   # GET /prace_polozkas/1
   # GET /prace_polozkas/1.json
   def show

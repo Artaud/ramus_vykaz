@@ -38,7 +38,7 @@ jQuery.extend jQuery.fn.dataTableExt.oSort,
 dTable = ->
   $("#prace_polozkas").dataTable
     fnHeaderCallback: (nRow, aaData, iStart, iEnd, aiDisplay) ->
-      HodinovaMzda=60
+      HodinovaMzda=60 # when changing this also change in projekt.rb
       i=0
       iTotalSoucet=0
 
@@ -98,6 +98,8 @@ dTable = ->
         '<option value="50">50</option>'+
         '<option value="-1">\u221e</option>'+
         '</select> řádků na stránce'
+
+ 
 
 
 $(document).ready(
